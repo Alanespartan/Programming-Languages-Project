@@ -1,5 +1,14 @@
-//  PauseState.java     Autor: Juan Arturo Cruz Cardona
-//  Clase que define el comportamiento del estado Pause
+/*Copyright (C) 2020 Juan Arturo Cruz Cardona
+* Final Project: 2D video game using a finite state machine, design patterns and threads.
+* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+* as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+* You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+_______________________________________________________________________________________________________________________________________ 
+* PauseState.java
+* Defines behavior of the pause in game
+*/
 package Videogame.State;
 
 import Videogame.ImageLoader.ImageLoader;
@@ -9,10 +18,8 @@ public class PauseState extends State{
     public PauseState(){
         background = ImageLoader.getInstance().getImage("pause");
     }
-    // Métodos para controlar la animación
     @Override
     public void gameUpdate(){
-
     }
     @Override
     public void gameRender(Graphics g, int PanelWidth, int PanelHeight){
@@ -22,15 +29,10 @@ public class PauseState extends State{
     public void play() {
         gameContext.setCurrentState(gameContext.getPlayState());
     }
-
-    /* No hacen nada*/
-    @Override
-    public void pause() {
-        // Do nothing
-    }
     @Override
     public void gameOver() {
-        // If a player pause the game but the other players kill the boss
         gameContext.setCurrentState(gameContext.getGameOverState());
     }
+    @Override
+    public void pause() {}
 }
