@@ -52,7 +52,6 @@ public class GameKeys implements Subject, KeyListener {
 			case "W": state = "up"; break;
 			case "S": state = "down"; break;
 			case "P": state = "pause"; break;
-			case "B": state = "dead"; break;
 			case "Intro": state = "enter"; break;
 			case "Enter": state = "enter"; break;
 			case "Escape": state = "escape"; break;

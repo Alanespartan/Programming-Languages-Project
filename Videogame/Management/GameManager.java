@@ -93,11 +93,6 @@ public class GameManager implements Observer {
                     this.writeThread.userShoot();
                 }
             }
-
-            // Auxiliar keys
-            else if (GameKeys.getInstance().getKeyPressed() == "dead") {
-                Player.getInstance().setIsDead(true);
-            }
         }
     }
 
