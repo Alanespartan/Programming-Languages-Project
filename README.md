@@ -1,4 +1,5 @@
 # Programming-Languages-Project
+Copyright (C) 2020 Juan Arturo Cruz Cardona
 
 Final Project: 2D video game using a finite state machine, design patterns and threads.
 
