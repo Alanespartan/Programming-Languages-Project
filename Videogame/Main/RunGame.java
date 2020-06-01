@@ -11,7 +11,7 @@ ________________________________________________________________________________
 */
 package Videogame.Main;
 
-import Videogame.Managment.GameManager;
+import Videogame.Management.GameManager;
 import Videogame.ImageLoader.ImageLoader;
 //import Videogame.Sound.MusicPlayer;
 import Videogame.State.GameContext;

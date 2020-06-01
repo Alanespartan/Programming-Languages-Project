@@ -16,7 +16,7 @@ import java.io.*;
 import java.net.*;
 import java.text.DecimalFormat;
 
-import Videogame.Managment.GameManager;
+import Videogame.Management.GameManager;
 
 public class WriteThread extends Thread {
     private PrintWriter writer;
