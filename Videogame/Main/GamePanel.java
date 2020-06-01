@@ -1,5 +1,14 @@
-//  GamePanel.java      Autor: Juan Arturo Cruz Cardona - Paulo Solis Alvarez
-//  Clase que adopta la esencia de panel para hacer la animación del juego
+/*Copyright (C) 2020 Juan Arturo Cruz Cardona
+* Final Project: 2D video game using a finite state machine, design patterns and threads.
+* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+* as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+* You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+_______________________________________________________________________________________________________________________________________ 
+* GamePanel.java
+* Run the animation of the game
+*/
 package Videogame.Main;
 
 import java.awt.*;
@@ -17,14 +26,14 @@ public class GamePanel extends JPanel implements Runnable{
     private Graphics dbg;
     private Image dbImage = null;
     
-    // Controlar animación y keyListeners
+    // Animation Control
     private volatile boolean isRunning;
     
-    // Delimitar el tamaño
+    // Size of the panel
     private static final int PanelWidth = 1500; //1920
     private static final int PanelHeight = 700; //1080
     
-    // Controlar FPS
+    // FPS Control
     private int kFPS = 60;
     private long period = 1000/kFPS; 
 
@@ -38,7 +47,7 @@ public class GamePanel extends JPanel implements Runnable{
         addKeyListener(GameKeys.getInstance());
     }
     
-    // Iniciar el juego
+    // Start game
     public void addNotify(){
         super.addNotify();
         this.startGame();
@@ -49,7 +58,7 @@ public class GamePanel extends JPanel implements Runnable{
         application.shutdown();
     }
     
-    // Correr animación
+    // Run animation
     @Override
     public void run() {
         System.out.println("GamePanel Thread Started Running The Animation");
@@ -95,7 +104,6 @@ public class GamePanel extends JPanel implements Runnable{
             }
         }
     }
-    // Controlar animación
     private void gameUpdate() {
         gameContext.gameUpdate();
     }

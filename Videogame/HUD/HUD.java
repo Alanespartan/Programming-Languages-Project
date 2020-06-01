@@ -1,5 +1,14 @@
-//  HUD.java      Autor: Juan Arturo Cruz Cardona
-//  Clase que se usa para mostrar los puntajes y más información al jugador
+/*Copyright (C) 2020 Juan Arturo Cruz Cardona
+* Final Project: 2D video game using a finite state machine, design patterns and threads.
+* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+* as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+* You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+_______________________________________________________________________________________________________________________________________ 
+* HUD.java
+* Render util information for the players
+*/
 package Videogame.HUD;
 
 import java.awt.*;
@@ -42,7 +51,6 @@ public class HUD{
     }
 
     public void renderHearts(Graphics g){
-         /* RENDER HP del jugador */
          int hp = Player.getInstance().getHP() / 10;
          int distance = 0;
          for(int i = 0; i < hp; i++){

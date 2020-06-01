@@ -1,5 +1,14 @@
-// GameContext.java      Autor: Juan Arturo Cruz Cardona
-// Contexto de la máquina de estados para controlarla
+/*Copyright (C) 2020 Juan Arturo Cruz Cardona
+* Final Project: 2D video game using a finite state machine, design patterns and threads.
+* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License 
+* as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+* You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+_______________________________________________________________________________________________________________________________________ 
+* GameContext.java
+* Define finite state machine
+*/
 package Videogame.State;
 
 import java.awt.*;
@@ -12,27 +21,26 @@ public class GameContext{
     private State gameOverState;
     private State menuState;
     
-    // Constructor
     public GameContext(){
         initComponents();
     }
 
-    // Método para generar los componentes de la máquina de estados
     private void initComponents(){
+        // Craate states
         pauseState = Factory.getInstance().createState("Pause");
         playState = Factory.getInstance().createState("Play");
         gameOverState = Factory.getInstance().createState("GameOver");
         menuState = Factory.getInstance().createState("Menu");
-        
+        // Set context
         pauseState.setGameContext(this);
         playState.setGameContext(this);
         gameOverState.setGameContext(this);
         menuState.setGameContext(this);
-        
+        // Set inital state
         currentState = menuState;
     }
 
-    // Métodos para controlar la animación
+    // Control animation based in the state
     public void gameUpdate(){
         currentState.gameUpdate();
     }
@@ -40,12 +48,12 @@ public class GameContext{
         currentState.gameRender(g,PanelWidth,PanelHeight);
     }
     
-    // Método para cambiar el estado actual
+    // Setters
     public void setCurrentState(State newState){
         currentState = newState;
     }
     
-    // Método para obtener los tipo de estado
+    // Getters
     public State getPlayState(){ 
         return playState; 
     }
@@ -62,7 +70,7 @@ public class GameContext{
         return currentState;
     }
     
-    // Métodos para pausar o reanudar la animación en el estado actual
+    // Speacial events that can occur in every state
     public void pause(){
         currentState.pause();
     }
