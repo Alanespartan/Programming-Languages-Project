@@ -11,7 +11,7 @@ public class Player extends MyGraphics{
         setHeight(75);
         setX1(20);
         setY1(570);
-        setHP(10);
+        setHP(50);
         setIsDead(false);
         setImage(ImageLoader.getInstance().getImage("player"));
     }

@@ -3,7 +3,7 @@ package Videogame.Main;
 
 import Videogame.Managment.GameManager;
 import Videogame.ImageLoader.ImageLoader;
-import Videogame.Sound.MusicPlayer;
+//import Videogame.Sound.MusicPlayer;
 import Videogame.State.GameContext;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
@@ -16,8 +16,8 @@ public class RunGame {
         ImageLoader.getInstance().load();
         
         // Load and start music
-        MusicPlayer.getInstance().loadClip("../Resources/Music/bossmusic.wav");
-        MusicPlayer.getInstance().playMusic();
+        //MusicPlayer.getInstance().loadClip("../Resources/Music/bossmusic.wav");
+        //MusicPlayer.getInstance().playMusic();
         
         // GameState Machine
         GameContext gameContext = new GameContext();        
