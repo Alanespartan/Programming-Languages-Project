@@ -1,6 +1,6 @@
 # Programming-Languages-Project
-# 2D video game using a finite state machine, design patterns and
-# threads.
+
+Final Project: 2D video game using a finite state machine, design patterns and threads.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
