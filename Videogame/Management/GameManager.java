@@ -10,7 +10,7 @@ ________________________________________________________________________________
 * Starts the client program and connects to a server and
 * make certain modifications to the gameplay based in server messages
 */
-package Videogame.Managment;
+package Videogame.Management;
 
 import Videogame.Observer.*;
 import Videogame.Sound.MusicPlayer;
@@ -92,11 +92,6 @@ public class GameManager implements Observer {
                     Player.getInstance().shoot();
                     this.writeThread.userShoot();
                 }
-            }
-
-            // Auxiliar keys
-            else if (GameKeys.getInstance().getKeyPressed() == "dead") {
-                Player.getInstance().setIsDead(true);
             }
         }
     }

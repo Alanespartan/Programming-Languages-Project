@@ -15,7 +15,7 @@ package Server;
 import java.io.*;
 import java.net.*;
 
-import Videogame.Managment.GameManager;
+import Videogame.Management.GameManager;
 
 public class ReadThread extends Thread {
     private BufferedReader reader;

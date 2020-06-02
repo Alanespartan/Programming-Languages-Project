@@ -25,7 +25,6 @@ public class Server{
 
     public Server(int port) {
         this.port = port;
-        // When creating the boss in each instance of the clients set the same initial hp
         this.mutualBoss = new Boss();
     }
 
