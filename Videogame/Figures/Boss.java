@@ -45,7 +45,7 @@ public class Boss extends MyGraphics{
         while(getHP() > 0) {
             if(!paused){
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(1100);
                     shoot();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
